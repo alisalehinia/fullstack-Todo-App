@@ -1,5 +1,5 @@
-import dbConnect from "../../../server/utils/dbconnect";
-import Todo from '../../../server/models/todo'
+import dbConnect from "@/server/utils/dbconnect";
+import Todo from '@/server/models/todo'
 dbConnect()
 export default async function handler(req, res) {
 

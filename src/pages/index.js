@@ -1,10 +1,10 @@
 import axios from "axios"
 import { useEffect, useState } from "react";
 import useSWR from "swr";
-import AddNewTodo from "../components/AddNewTodo";
+import AddNewTodo from "@/components/AddNewTodo";
 import Link from "next/link";
-import Todo from '../server/models/todo'
-import Layout from "../containers/Layout";
+import Todo from '@/server/models/todo'
+import Layout from "@/containers/Layout";
 
 export default function Home({ todos }) {
   const [data, setData] = useState(todos)
