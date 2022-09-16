@@ -5,6 +5,7 @@ import AddNewTodo from "@/components/AddNewTodo";
 import Link from "next/link";
 import Todo from '@/server/models/todo'
 import Layout from "@/containers/Layout";
+import dbConnect from "@/server/utils/dbConnect";
 
 export default function Home({ todos }) {
   const [data, setData] = useState(todos)
@@ -80,7 +81,7 @@ export default function Home({ todos }) {
   )
 }
 export async function getServerSideProps() {
-
+  dbConnect();
   const todos = await Todo.find({});
   return {
     props: {
